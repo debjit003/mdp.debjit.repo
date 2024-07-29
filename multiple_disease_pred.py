@@ -15,7 +15,7 @@ import pandas as pd
 #loading the saved model
 
 #diabetes
-diabetes_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_diabetes.sav', 'rb'))
+diabetes_model = pickle.load(open('Multiple_disease_prediction/trained_model_diabetes.sav', 'rb'))
 
 #heart disease
 heart_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_heartDisease.sav', 'rb'))
