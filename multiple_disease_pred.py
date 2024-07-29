@@ -54,7 +54,7 @@ with st.sidebar:
 if(selected == 'Diabetes Prediction'):
     
     # Upload file
-    data = pd.read_csv("C:/Users/USER/Multiple_disease_prediction/diabetes.csv")
+    data = pd.read_csv("Multiple_disease_prediction/diabetes.csv")
     data = data.drop(columns='Outcome', axis=1)
 
 
@@ -272,7 +272,7 @@ if(selected == 'Breast Cancer Prediction'):
 if(selected == 'Lung Cancer Prediction'):
     
     # Upload dataset of trained model
-    data = pd.read_csv("C:/Users/USER/Multiple_disease_prediction/survey lung cancer.csv")
+    data = pd.read_csv("Multiple_disease_prediction/survey lung cancer.csv")
 
     # replacing Target values with 0 and 1 instead of YES and NO.
     data['LUNG_CANCER'].replace('YES',1,inplace=True)
@@ -363,7 +363,7 @@ if(selected == 'Lung Cancer Prediction'):
 if(selected == 'Parkinsons Disease Prediction'):
     
     # Upload file
-    data = pd.read_csv("C:/Users/USER/Multiple_disease_prediction/parkinsons.csv")
+    data = pd.read_csv("Multiple_disease_prediction/parkinsons.csv")
     data = data.drop('name', axis=1)
     X = data.drop(columns='status',axis=1)
     Y = data['status']
