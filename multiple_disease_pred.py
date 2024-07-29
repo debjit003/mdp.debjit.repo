@@ -18,16 +18,16 @@ import pandas as pd
 diabetes_model = pickle.load(open('Multiple_disease_prediction/trained_model_diabetes.sav', 'rb'))
 
 #heart disease
-heart_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_heartDisease.sav', 'rb'))
+heart_model = pickle.load(open('Multiple_disease_prediction/trained_model_heartDisease.sav', 'rb'))
 
 #breast cancer
-brst_cancer_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_breast_cancer.sav', 'rb'))
+brst_cancer_model = pickle.load(open('Multiple_disease_prediction/trained_model_breast_cancer.sav', 'rb'))
 
 #lung cancer
-lung_cancer_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_Lung_cancer.sav','rb'))
+lung_cancer_model = pickle.load(open('Multiple_disease_prediction/trained_model_Lung_cancer.sav','rb'))
 
 #parkinsons disease
-parkinsons_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_Parkinson.sav','rb'))
+parkinsons_model = pickle.load(open('Multiple_disease_prediction/trained_model_Parkinson.sav','rb'))
 
 
 
