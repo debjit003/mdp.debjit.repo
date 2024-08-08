@@ -102,6 +102,11 @@ if(selected == 'Diabetes Prediction'):
     #creating a button for prediction
     if st.button('Predict'):
         diab_prediction = diabetes_model.predict(std_data)
+
+        # Print debugging information
+        st.write("Input Data:", input_data_as_numpy_array)
+        st.write("Standardized Data:", std_data)
+        st.write("Model Prediction:", diab_prediction)
     
         if(diab_prediction[0]==0):
             st.success('The Person is not Diabetic')
