@@ -102,11 +102,11 @@ if(selected == 'Diabetes Prediction'):
     if st.button('Predict'):
         diab_prediction = diabetes_model.predict(std_data)
     
-        if(diab_prediction[0]==1):
-            st.warning('The Person is Diabetic')
+        if(diab_prediction[0]==0):
+            st.success('The Person is not Diabetic')
             
         else:
-            st.success('The Person is Not Diabetic')
+            st.warning('The Person is Diabetic')
             
 # Heart Disease prediction Page
 if(selected == 'Heart Disease Prediction'):
