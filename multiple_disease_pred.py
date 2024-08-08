@@ -32,7 +32,7 @@ parkinsons_model = pickle.load(open('Multiple_disease_prediction/trained_model_P
 
 
 #icons raw format
-diabetes = """<img width="50" height="50" src="https://img.icons8.com/external-others-pike-picture/50/external-sugar-atherosclerosis-vessel-others-pike-picture.png" alt="external-sugar-atherosclerosis-vessel-others-pike-picture"/>"""
+#diabetes = """<img width="50" height="50" src="https://img.icons8.com/external-others-pike-picture/50/external-sugar-atherosclerosis-vessel-others-pike-picture.png" alt="external-sugar-atherosclerosis-vessel-others-pike-picture"/>"""
 
 
 
@@ -64,7 +64,7 @@ if(selected == 'Diabetes Prediction'):
     
     # Page Title
     st.title('Diabetes Prediction using ML')
-    st.markdown(diabetes,unsafe_allow_html=True)
+    #st.markdown(diabetes,unsafe_allow_html=True)
     
     # getting the input data from user
     #Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age
@@ -111,12 +111,13 @@ if(selected == 'Diabetes Prediction'):
 # Heart Disease prediction Page
 if(selected == 'Heart Disease Prediction'):
     # Page Title
+    st.title('Heart Disease Prediction using ML')
     
-    html_temp = '''<div style ="background-color:Purple;padding:13px">
-    <h1 style ="color:white;text-align:center;"> Heart Disease Prediction using ML </h1>
-    </div>'''
+    #html_temp = '''<div style ="background-color:Purple;padding:13px">
+    #<h1 style ="color:white;text-align:center;"> Heart Disease Prediction using ML </h1>
+    #</div>'''
     
-    st.markdown(html_temp, unsafe_allow_html = True)
+    #st.markdown(html_temp, unsafe_allow_html = True)
     
     # getting the input data from user
     #BMI, Smoking, AlcoholDrinking, Stroke,PhysicalHealth, MentalHealth, DiffWalking, Sex, AgeCategory,Race, Diabetic, PhysicalActivity, GenHealth, SleepTime,Asthma, KidneyDisease, SkinCancer
@@ -227,12 +228,13 @@ if(selected == 'Heart Disease Prediction'):
 # Breast Cancer prediction Page
 if(selected == 'Breast Cancer Prediction'):
     # Page Title
+    st.title('Breast Cancer Prediction using ML')
     
-    html_temp = '''<div style ="background-color:Purple;padding:13px">
-    <h1 style ="color:white;text-align:center;"> Breast Cancer Recurrence Prediction using ML </h1>
-    </div>'''
+    #html_temp = '''<div style ="background-color:Purple;padding:13px">
+    #<h1 style ="color:white;text-align:center;"> Breast Cancer Recurrence Prediction using ML </h1>
+    #</div>'''
     
-    st.markdown(html_temp, unsafe_allow_html = True)
+    #st.markdown(html_temp, unsafe_allow_html = True)
     
     #columns for input fields
     col1, col2, col3 = st.columns(3)
@@ -291,11 +293,13 @@ if(selected == 'Lung Cancer Prediction'):
     scaler.fit_transform(X)
     
     # Page Title
-    html_temp = '''<div style ="background-color:Purple;padding:13px">
-    <h1 style ="color:white;text-align:center;"> Lung Cancer Prediction using ML </h1>
-    </div>'''
+    st.title('Lung Cancer Prediction using ML')
     
-    st.markdown(html_temp, unsafe_allow_html = True)
+    #html_temp = '''<div style ="background-color:Purple;padding:13px">
+    #<h1 style ="color:white;text-align:center;"> Lung Cancer Prediction using ML </h1>
+    #</div>'''
+    
+    #st.markdown(html_temp, unsafe_allow_html = True)
     
     #columns for input fields
     col1, col2, col3 = st.columns(3)
@@ -373,11 +377,13 @@ if(selected == 'Parkinsons Disease Prediction'):
     scaler.fit(X)
     
     # Page Title
-    html_temp = '''<div style ="background-color:Purple;padding:13px">
-    <h1 style ="color:white;text-align:center;"> Parkinson's Disease Prediction using ML </h1>
-    </div>'''
+    st.title('Parkinsons Disease Prediction using ML')
     
-    st.markdown(html_temp, unsafe_allow_html = True)
+    #html_temp = '''<div style ="background-color:Purple;padding:13px">
+    #<h1 style ="color:white;text-align:center;"> Parkinson's Disease Prediction using ML </h1>
+    #</div>'''
+    
+    #st.markdown(html_temp, unsafe_allow_html = True)
 
     st.text("Enter Vocal Fundamental Frequencies below")
     
