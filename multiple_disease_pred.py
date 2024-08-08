@@ -16,6 +16,7 @@ import pandas as pd
 
 #diabetes
 diabetes_model = pickle.load(open('Multiple_disease_prediction/trained_model_diabetes.sav', 'rb'))
+scaler = pickle.load(open('Multiple_disease_prediction/scaler_diabetes.sav', 'rb'))
 
 #heart disease
 heart_model = pickle.load(open('Multiple_disease_prediction/trained_model_heartDisease.sav', 'rb'))
@@ -59,8 +60,8 @@ if(selected == 'Diabetes Prediction'):
 
 
     # standardizing data 
-    scaler = StandardScaler()
-    standardized_data = scaler.fit_transform(data)
+    #scaler = StandardScaler()
+    #standardized_data = scaler.fit_transform(data)
     
     # Page Title
     st.title('Diabetes Prediction using ML')
