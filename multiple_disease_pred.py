@@ -110,7 +110,7 @@ if(selected == 'Diabetes Prediction'):
     if st.button('Predict'):
         try:
             diab_prediction = diabetes_model.predict(std_data)
-            
+            st.write("prediction:", diab_prediction[0])
             if diab_prediction[0] == 0:
                 st.success('The Person is not Diabetic')
             else:
