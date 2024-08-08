@@ -95,14 +95,9 @@ if(selected == 'Diabetes Prediction'):
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     
-    # Print debugging information
-    st.write("Input Data Shape:", input_data_reshaped.shape)
-    st.write("Input Data:", input_data_as_numpy_array)
-    
     # Standardize the input data
     try:
         std_data = scaler.transform(input_data_reshaped)
-        st.write("Standardized Data:", std_data)
     except ValueError as e:
         st.error(f"Error during scaling: {e}")
     
@@ -110,7 +105,6 @@ if(selected == 'Diabetes Prediction'):
     if st.button('Predict'):
         try:
             diab_prediction = diabetes_model.predict(std_data)
-            st.write("prediction:", diab_prediction[0])
             if diab_prediction[0] == 0:
                 st.success('The Person is not Diabetic')
             else:
