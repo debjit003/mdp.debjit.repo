@@ -95,24 +95,28 @@ if(selected == 'Diabetes Prediction'):
     # reshape the array as we are predicting for one instance
     input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
     
-
-    # standardize the input data
-    std_data = scaler.transform(input_data_reshaped)
+    # Print debugging information
+    st.write("Input Data Shape:", input_data_reshaped.shape)
+    st.write("Input Data:", input_data_as_numpy_array)
     
-    #creating a button for prediction
-    if st.button('Predict'):
-        diab_prediction = diabetes_model.predict(std_data)
-
-        # Print debugging information
-        st.write("Input Data:", input_data_as_numpy_array)
+    # Standardize the input data
+    try:
+        std_data = scaler.transform(input_data_reshaped)
         st.write("Standardized Data:", std_data)
-        st.write("Model Prediction:", diab_prediction)
+    except ValueError as e:
+        st.error(f"Error during scaling: {e}")
     
-        if(diab_prediction[0]==0):
-            st.success('The Person is not Diabetic')
+    # Creating a button for prediction
+    if st.button('Predict'):
+        try:
+            diab_prediction = diabetes_model.predict(std_data)
             
-        else:
-            st.warning('The Person is Diabetic')
+            if diab_prediction[0] == 0:
+                st.success('The Person is not Diabetic')
+            else:
+                st.warning('The Person is Diabetic')
+        except Exception as e:
+            st.error(f"Prediction error: {e}")
             
 # Heart Disease prediction Page
 if(selected == 'Heart Disease Prediction'):
