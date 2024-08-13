@@ -15,19 +15,19 @@ import pandas as pd
 #loading the saved model
 
 #diabetes
-diabetes_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_diabetes.sav', 'rb'))
+diabetes_model = pickle.load(open('Multiple_disease_prediction/trained_model_diabetes.sav', 'rb'))
 
 #heart disease
-heart_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_heartDisease.sav', 'rb'))
+heart_model = pickle.load(open('Multiple_disease_prediction/trained_model_heartDisease.sav', 'rb'))
 
 #breast cancer
-brst_cancer_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_breast_cancer.sav', 'rb'))
+brst_cancer_model = pickle.load(open('Multiple_disease_prediction/trained_model_breast_cancer.sav', 'rb'))
 
 #lung cancer
-lung_cancer_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_Lung_cancer.sav','rb'))
+lung_cancer_model = pickle.load(open('Multiple_disease_prediction/trained_model_Lung_cancer.sav','rb'))
 
 #parkinsons disease
-parkinsons_model = pickle.load(open('C:/Users/USER/Multiple_disease_prediction/trained_model_Parkinson.sav','rb'))
+parkinsons_model = pickle.load(open('Multiple_disease_prediction/trained_model_Parkinson.sav','rb'))
 
 
 
@@ -319,7 +319,7 @@ if(selected == 'Breast Cancer Prediction'):
 if(selected == 'Lung Cancer Prediction'):
     
     # Upload dataset of trained model
-    data = pd.read_csv("C:/Users/USER/Multiple_disease_prediction/survey lung cancer.csv")
+    data = pd.read_csv("Multiple_disease_prediction/survey lung cancer.csv")
 
     # replacing Target values with 0 and 1 instead of YES and NO.
     data['LUNG_CANCER'].replace('YES',1,inplace=True)
@@ -411,7 +411,7 @@ if(selected == 'Lung Cancer Prediction'):
 if(selected == 'Parkinsons Disease Prediction'):
     
     # Upload file
-    data = pd.read_csv("C:/Users/USER/Multiple_disease_prediction/parkinsons.csv")
+    data = pd.read_csv("Multiple_disease_prediction/parkinsons.csv")
     data = data.drop('name', axis=1)
     X = data.drop(columns='status',axis=1)
     Y = data['status']
